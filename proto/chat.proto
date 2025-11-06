@@ -1,0 +1,14 @@
+syntax = 'proto3';
+
+package chat.v1;
+
+option go_package = "github.com/mariapizzeria/proto-chat/pb";
+
+message Message {
+  string text = 1; //текст сообщения
+  int64 timestamp = 2; //дата отправки
+}
+
+service Chat{
+  rpc SendMessage(stream Message) returns (stream Message);
+}
