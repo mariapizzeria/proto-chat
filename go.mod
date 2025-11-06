@@ -1,4 +1,4 @@
-module proto-chat
+module github.com/mariapizzeria/proto-chat
 
 go 1.25.0
 
